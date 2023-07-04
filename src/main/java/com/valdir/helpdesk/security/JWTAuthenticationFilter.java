@@ -44,9 +44,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 	}
 	
 	@Override
-    protected void successfulAuthentication(HttpServletRequest req,
-                                            HttpServletResponse res,
-                                            FilterChain chain,
+    protected void successfulAuthentication(HttpServletRequest req, HttpServletResponse response, FilterChain chain,
                                             Authentication auth) throws IOException, ServletException {
 	
 		String username = ((UserSS) auth.getPrincipal()).getUsername();
